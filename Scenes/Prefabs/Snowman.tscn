@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4fm1j62485is"]
+
+[ext_resource type="Material" uid="uid://s1du47gpb3ag" path="res://Materials/TestMaterial.tres" id="1_ekvun"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_fns6d"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_hstko"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qoyxh"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_acmaa"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.067, 0, 0, 0, 0.067, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="BottomSphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(15.1515, 0, 0, 0, 15.1515, 0, 0, 0, 1.0101, 0, -10, 0)
+material_override = ExtResource("1_ekvun")
+mesh = SubResource("SphereMesh_fns6d")
+skeleton = NodePath("../..")
+
+[node name="MiddleSphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 0.666667, 0, 0, 0)
+material_override = ExtResource("1_ekvun")
+mesh = SubResource("SphereMesh_hstko")
+skeleton = NodePath("../BottomSphere")
+
+[node name="ArmRectangle" type="MeshInstance3D" parent="MiddleSphere"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 1.5, 0, 0, 0)
+material_override = ExtResource("1_ekvun")
+mesh = SubResource("BoxMesh_qoyxh")
+
+[node name="TopSphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 0.333333, 0, 6.0606, 0)
+material_override = ExtResource("1_ekvun")
+mesh = SubResource("SphereMesh_acmaa")
+skeleton = NodePath("../BottomSphere")

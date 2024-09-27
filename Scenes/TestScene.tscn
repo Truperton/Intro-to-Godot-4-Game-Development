@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c17c7yvltd1fk"]
+
+[ext_resource type="PackedScene" uid="uid://bu8v1u4txuwol" path="res://Scenes/Prefabs/PlayerJustSprite.tscn" id="1_23gnh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_23gnh")]

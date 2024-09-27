@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://daw55e0ga3r7c"]
+
+[ext_resource type="PackedScene" uid="uid://b4fm1j62485is" path="res://Scenes/Prefabs/Snowman.tscn" id="1_bfhri"]
+[ext_resource type="Material" uid="uid://c8smhmcken0m6" path="res://Materials/MattePurple.tres" id="2_txxj4"]
+[ext_resource type="Material" uid="uid://dab1vqqq8d0co" path="res://Materials/SemiTransparentBlue.tres" id="3_ny7vx"]
+[ext_resource type="Material" uid="uid://c18sahlbythj3" path="res://Materials/SpriteTexture.tres" id="4_2t0n1"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_25ks3"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_bfhri")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34764, 0, 0)
+material_override = ExtResource("2_txxj4")
+mesh = SubResource("SphereMesh_25ks3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45596, 0, 0)
+material_override = ExtResource("3_ny7vx")
+mesh = SubResource("SphereMesh_25ks3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.65415, 0, 0)
+material_override = ExtResource("4_2t0n1")
+mesh = SubResource("SphereMesh_25ks3")
